@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <Prueba />
+    <router-view />
   </div>
 </template>
 
 <script>
-import Prueba from "@/prueba/context/views/Prueba.vue";
+// import Prueba from "@/prueba/context/views/Prueba.vue";
 
 export default {
   name: "App",
-  components: {
-    Prueba,
-  },
+  // components: {
+  //   Prueba,
+  // },
 };
 </script>
 

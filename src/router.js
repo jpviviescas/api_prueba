@@ -6,7 +6,10 @@ const routes = [
   {
     path: "/",
     name: "inicio",
-    component: () => import(/* webpackChunkName: "collection" */ "@/App.vue"),
+    component: () =>
+      import(
+        /* webpackChunkName: "collection" */ "@/prueba/context/views/Prueba.vue"
+      ),
   },
   {
     path: "/list",
