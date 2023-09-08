@@ -19,6 +19,14 @@ const routes = [
         /* webpackChunkName: "pokemonList" */ "@/prueba/context/views/PokemonList.vue"
       ),
   },
+  {
+    path: "/pagination",
+    name: "pagination",
+    component: () =>
+      import(
+        /* webpackChunkName: "pokemonList" */ "@/prueba/context/views/PokemonPagiation.vue"
+      ),
+  },
 ];
 
 const router = new VueRouter({
