@@ -1,24 +1,16 @@
 <template>
-  <div class="BackgroundPokemonList"><p class="listTitle">Pokemon List</p></div>
+  <div class="BackgroundPokemonList">
+    <p class="listTitle">Pokemon List</p>
+    <getPokemonList />
+  </div>
 </template>
 <script>
-import axios from "axios";
+import getPokemonList from "../components/getPokemonList.vue";
 
 export default {
   name: "PokemonList",
-  data() {
-    return {
-      pokemons: null,
-    };
-  },
-  beforeCreate() {
-    axios
-      .get("https://pokeapi.co/api/v2/pokemon/6")
-      .then((response) => (this.pokemons = response))
-      .catch(function (error) {
-        console.log(error.toJSON());
-      });
-    console.log(this.pokemons);
+  components: {
+    getPokemonList,
   },
 };
 </script>
@@ -28,7 +20,8 @@ export default {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .BackgroundPokemonList .listTitle {
   font-size: 5vh;
